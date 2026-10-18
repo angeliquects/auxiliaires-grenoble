@@ -300,6 +300,19 @@ summary::after{color:var(--terra)}
 .quote p em{color:#f0a68d}
 .quote span{display:inline-block;margin-top:26px;font-family:var(--hand);font-size:30px;color:#f0a68d}
 @media (max-width:640px){.quote{padding:72px 0}}
+
+/* v9 */
+.mark{white-space:normal}
+h2 .mark::after{height:.26em;bottom:-.06em}
+.price .amt{font-family:var(--sans);font-weight:800;font-size:28px;letter-spacing:-.02em}
+.price .amt small{font-weight:600}
+.svc{transition:background .25s,border-color .25s}
+.svc .ic{transition:background .25s,color .25s}
+.svc:hover{background:var(--sand-2);border-color:var(--terra)}
+.svc:hover .ic{background:var(--terra)!important;color:#fff!important}
+.svc h3{position:relative}
+.hand-tag{display:block;font-family:var(--hand);font-size:26px;color:var(--terra);transform:rotate(-3deg);margin:-6px 0 10px}
+.about-img img{object-position:center 30%}
 </style>
 </head>
 <body>
@@ -370,7 +383,7 @@ summary::after{color:var(--terra)}
   <section id="services">
     <div class="wrap">
       <p class="eyebrow">Nos services</p>
-      <h2>Un accompagnement adapté à chaque personne</h2>
+      <h2>Un accompagnement adapté à <span class="mark">chaque personne</span></h2>
       <p class="sub">Nous intervenons selon les besoins, les habitudes et le rythme de chacun.</p>
       <div class="svc-grid">
         <article class="svc"><div class="ic"><svg><use href="#bed"/></svg></div><h3>Lever, coucher &amp; nuit</h3><p>Aide au lever et au coucher, garde de nuit rassurante.</p></article>
@@ -390,7 +403,7 @@ summary::after{color:var(--terra)}
       <div class="band-inner">
         <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1000&q=75" alt="Mains jointes, geste de soutien" loading="lazy">
         <div class="band-text">
-          <h2>Toujours des visages connus</h2>
+          <h2>Toujours des <span class="mark">visages connus</span></h2>
           <p>Travailler à trois nous permet d'assurer une vraie continuité : remplacements, nuits et week-ends sont assurés par l'une d'entre nous, jamais par un inconnu.</p>
         </div>
       </div>
@@ -438,7 +451,7 @@ summary::after{color:var(--terra)}
           <p>Nous sommes Kenza Herif, Avril Endezoumou et Angélique Courtois, auxiliaires de vie à domicile dans l'agglomération grenobloise.</p>
           <p>Notre objectif : que la personne accompagnée reste chez elle le plus longtemps possible, en sécurité et dans le respect de ses habitudes, et que sa famille soit rassurée.</p>
         </div>
-        <div class="about-img"><img src="https://images.unsplash.com/photo-1765896387377-e293914d1e69?auto=format&fit=crop&w=900&q=75" alt="Auxiliaire de vie et dame âgée souriantes" loading="lazy"></div>
+        <div class="about-img"><img src="https://images.unsplash.com/photo-1762955911431-4c44c7c3f408?auto=format&fit=crop&w=900&q=75" alt="Auxiliaire de vie accompagnant un couple de personnes âgées à domicile" loading="lazy"></div>
       </div>
       <div class="values">
         <div class="value"><svg><use href="#heart"/></svg><b>Bienveillance</b><p>Une approche humaine et respectueuse.</p></div>
@@ -454,7 +467,7 @@ summary::after{color:var(--terra)}
       <div class="aides-head">
         <div>
           <p class="eyebrow">Aides financières</p>
-          <h2>Des aides pour alléger le coût</h2>
+          <h2>Des aides pour <span class="mark">alléger le coût</span></h2>
           <p class="sub">Vous pouvez être aidé, et nous vous accompagnons dans les démarches.</p>
         </div>
         <div class="calc">
@@ -491,7 +504,8 @@ summary::after{color:var(--terra)}
           <li><svg><use href="#check"/></svg>Aide administrative si besoin</li>
           <li><svg><use href="#check"/></svg>Lien régulier avec la famille</li>
         </ul>
-        <a class="link" href="#aides">Une partie peut être prise en charge : voir les aides →</a>
+        <span class="hand-tag">une partie peut être prise en charge&nbsp;!</span>
+        <a class="link" href="#aides">Voir les aides financières →</a>
       </div>
     </div>
   </section>
@@ -500,7 +514,7 @@ summary::after{color:var(--terra)}
     <div class="wrap zones-grid">
       <div>
         <p class="eyebrow">Zones d'intervention</p>
-        <h2>Nous venons chez vous, dans toute l'agglomération grenobloise</h2>
+        <h2>Nous venons chez vous, dans toute <span class="mark">l'agglomération</span> grenobloise</h2>
         <div class="chips">
           <span class="chip">Grenoble</span><span class="chip">Saint-Martin-d'Hères</span><span class="chip">Échirolles</span><span class="chip">Eybens</span>
           <span class="chip">Meylan</span><span class="chip">La Tronche</span><span class="chip">Corenc</span><span class="chip">et alentours</span>
@@ -532,7 +546,7 @@ summary::after{color:var(--terra)}
     <div class="wrap contact-grid">
       <div>
         <p class="eyebrow">Contact</p>
-        <h2>Parlons de vos besoins</h2>
+        <h2>Parlons de <span class="mark">vos besoins</span></h2>
         <p class="sub">Appelez l'une d'entre nous ou envoyez-nous un e-mail. Le premier échange est sans engagement.</p>
         <div class="contact-meta">
           <span><svg><use href="#pin"/></svg>Grenoble et toute l'agglomération</span>
