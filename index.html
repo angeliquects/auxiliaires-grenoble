@@ -258,6 +258,40 @@ footer a:hover{color:#fff}
   .call-fab{display:flex;position:fixed;left:16px;right:16px;bottom:16px;z-index:60;justify-content:center;box-shadow:0 10px 30px rgba(10,52,66,.35)}
   footer{padding-bottom:110px}
 }
+
+/* ===== v6 warmth (3rd colour: terracotta/sand) ===== */
+:root{--terra:#c8735a;--sand:#f5e9dc;--sand-2:#fbf4ec}
+.eyebrow{color:var(--terra)}
+.reassure svg{color:var(--terra)}
+.hero{background:linear-gradient(90deg,var(--sand-2) 0 50%,transparent 50%)}
+.badge{border:3px dashed #ecd5c0}
+.badge svg{color:var(--terra)}
+.svc:nth-child(odd) .ic{background:var(--sand);color:var(--terra)}
+.band-inner{background:var(--sand)}
+.band img{border-radius:0 48% 48% 0/0 50% 50% 0}
+.who{background:var(--sand-2)}
+.who-card{background:#fff}
+.who-card:nth-child(2) .ic{background:var(--terra)}
+.step .n{background:var(--sand);color:var(--navy-d)}
+.about-img{border-radius:42% 58% 50% 50%/48% 44% 56% 52%}
+.value svg{color:var(--terra)}
+.aides{background:var(--sand-2)}
+.aide{background:#fff}
+.aide:nth-child(odd) .pill{background:var(--sand);color:var(--terra)}
+.price .ic{background:var(--sand);color:var(--terra)}
+.tarifs-side li svg{color:var(--terra)}
+.chip{border-color:#ecd5c0}
+.zone-wrap{position:relative}
+.zone-img{border-radius:40% 60% 52% 48%/46% 42% 58% 54%;aspect-ratio:5/4}
+.zone-badge{left:auto;right:-10px;bottom:10px}
+.faq{background:#fff}
+summary::after{color:var(--terra)}
+.contact-meta svg{color:var(--terra)}
+@media (max-width:1000px){
+  .hero{background:var(--sand-2)}
+  .zone-badge{right:10px;bottom:-10px}
+  .band img{border-radius:0}
+}
 </style>
 </head>
 <body>
@@ -458,9 +492,9 @@ footer a:hover{color:#fff}
         </div>
         <p class="muted" style="margin-top:22px">Votre commune n'est pas dans la liste ? Appelez-nous, nous verrons ensemble.</p>
       </div>
-      <div class="zone-img">
-        <img src="https://images.unsplash.com/photo-1649511134921-67afc567280c?auto=format&fit=crop&w=1000&q=75" alt="Salon lumineux avec fauteuil" loading="lazy">
-        <span class="zone-tag"><svg><use href="#home"/></svg>Interventions 7j/7 à domicile</span>
+      <div class="zone-wrap">
+        <div class="zone-img"><img src="https://images.unsplash.com/photo-1649511134921-67afc567280c?auto=format&fit=crop&w=1000&q=75" alt="Salon lumineux avec fauteuil" loading="lazy"></div>
+        <div class="badge zone-badge"><svg><use href="#home"/></svg>Interventions 7j/7 à domicile</div>
       </div>
     </div>
   </section>
