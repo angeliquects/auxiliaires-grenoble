@@ -23,7 +23,7 @@
   "description": "Auxiliaires de vie à domicile pour personnes âgées et en perte d'autonomie dans l'agglomération grenobloise.",
   "url": "https://auxiliaires-grenoble.vercel.app/",
   "telephone": "+33614896221",
-  "email": "angeliquecourtois2012@hotmail.fr",
+  "email": "avril.endezoumou@hotmail.fr",
   "priceRange": "24 € - 27 € / heure",
   "paymentAccepted": "CESU",
   "address": {"@type": "PostalAddress", "addressLocality": "Grenoble", "postalCode": "38000", "addressCountry": "FR"},
@@ -394,6 +394,20 @@ h2 .mark::after{height:.26em;bottom:-.06em}
 .mark{white-space:normal;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'%3E%3Cpath d='M3 14C40 5 90 4 197 9' stroke='%23e07a5f' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") left bottom/100% .28em no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding-bottom:.08em}
 .mark::after{display:none!important}
 .hero .mark{white-space:nowrap}
+
+/* v12 tarifs alignment + contact */
+.tarifs2{grid-template-columns:3fr 1.25fr;gap:20px;align-items:stretch}
+.tarifs2 .t-intro{grid-column:1/-1;margin-bottom:12px}
+.tarifs2 .t-intro .muted{margin-top:12px}
+.tarifs2 .t-intro .muted{max-width:38ch}
+.t-cards{align-items:stretch}
+.t-card{height:100%}
+.t-card .amt{margin-top:auto;padding-top:22px}
+.tarifs2 .tarifs-side{display:flex;flex-direction:column;justify-content:center}
+.tarifs2 .hand-tag{font-size:23px;margin:4px 0 8px}
+.c-note{right:auto;left:auto;top:36px;right:36px;bottom:auto;text-align:right}
+.c-img img{object-position:center center}
+@media (max-width:1000px){.tarifs2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -578,7 +592,7 @@ h2 .mark::after{height:.26em;bottom:-.06em}
         <p class="muted">Règlement via le CESU (Chèque Emploi Service Universel).</p>
       </div>
       <div class="t-cards">
-        <div class="t-card"><span class="ic"><svg><use href="#cal"/></svg></span><b>Semaine</b><small>Du lundi au vendredi</small><span class="amt">24 €/h</span></div>
+        <div class="t-card"><span class="ic"><svg><use href="#cal"/></svg></span><b>Semaine</b><small>Lundi au vendredi</small><span class="amt">24 €/h</span></div>
         <div class="t-card"><span class="ic"><svg><use href="#cal"/></svg></span><b>Samedi</b><small>Week-end</small><span class="amt">25 €/h</span></div>
         <div class="t-card"><span class="ic"><svg><use href="#cal"/></svg></span><b>Dimanche</b><small>Week-end</small><span class="amt">27 €/h</span></div>
       </div>
@@ -589,7 +603,7 @@ h2 .mark::after{height:.26em;bottom:-.06em}
           <li><svg><use href="#check"/></svg>Aide à la mise en place du CESU</li>
           <li><svg><use href="#check"/></svg>Aide administrative si besoin</li>
         </ul>
-        <span class="hand-tag">une partie peut être prise en charge&nbsp;!</span>
+        <span class="hand-tag">jusqu'à 50 % de crédit d'impôt&nbsp;!</span>
         <a class="link" href="#aides">Voir les aides financières →</a>
       </div>
     </div>
@@ -644,7 +658,7 @@ h2 .mark::after{height:.26em;bottom:-.06em}
           </div>
         </div>
         <div class="c-img">
-          <img src="https://images.unsplash.com/photo-1769637565381-f21f88e7b4d6?auto=format&fit=crop&w=1100&q=75" alt="Table dressée dans un intérieur lumineux" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1617543414010-212c4537604d?auto=format&fit=crop&w=1100&q=75" alt="Tasse de thé sur une table" loading="lazy">
           <span class="c-note">Une présence qui fait la différence</span>
         </div>
       </div>
@@ -660,7 +674,7 @@ h2 .mark::after{height:.26em;bottom:-.06em}
         <p>Aide à domicile pour personnes âgées et en perte d'autonomie à Grenoble et dans l'agglomération.</p>
       </div>
       <nav aria-label="Navigation"><h4>Navigation</h4><a href="#services">Services</a><a href="#aides">Aides</a><a href="#tarifs">Tarifs</a><a href="#zones">Zones</a><a href="#contact">Contact</a></nav>
-      <div class="fc"><h4>Nous joindre</h4><a href="tel:+33614896221"><svg><use href="#phone"/></svg>06 14 89 62 21</a><a href="mailto:angeliquecourtois2012@hotmail.fr"><svg><use href="#mail"/></svg>angeliquecourtois2012@hotmail.fr</a><span><svg><use href="#pin"/></svg>Grenoble et agglomération</span></div>
+      <div class="fc"><h4>Nous joindre</h4><a href="tel:+33614896221"><svg><use href="#phone"/></svg>06 14 89 62 21</a><a href="mailto:avril.endezoumou@hotmail.fr"><svg><use href="#mail"/></svg>avril.endezoumou@hotmail.fr</a><span><svg><use href="#pin"/></svg>Grenoble et agglomération</span></div>
     </div>
     <div class="legal"><span>© <span id="y">2026</span> Kenza, Avril &amp; Angélique – Auxiliaires de vie à domicile</span><span><a href="mentions-legales.html">Mentions légales</a> · Photos : Unsplash</span></div>
   </div>
