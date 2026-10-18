@@ -13,7 +13,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23154e5c'/%3E%3Cpath d='M32 46s-14-8.5-14-18a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 9.5-14 18-14 18z' fill='%23f6f1e8'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..600,50&family=Nunito:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -292,6 +292,41 @@ summary::after{color:var(--terra)}
   .zone-badge{right:10px;bottom:-10px}
   .band img{border-radius:0}
 }
+
+/* ===== v7 wow: typo + richer colours ===== */
+:root{--serif:"Instrument Serif",Georgia,serif;--sans:"Manrope",system-ui,-apple-system,sans-serif;--navy:#0b4656;--navy-d:#082f3b;--terra:#cf6a4c;--sand:#f3e4d4;--sand-2:#faf1e7}
+h1,h2,h3,.brand b,.value b,.tm b,.price .amt,.calc .big,.step .n{font-family:var(--serif);font-variation-settings:normal;font-weight:400;letter-spacing:-.01em}
+h1{font-size:clamp(48px,6.2vw,84px)!important;line-height:1.02}
+h2{font-size:clamp(38px,4.6vw,60px);line-height:1.05}
+h3{font-size:26px}
+.svc h3,.aide h3{font-family:var(--sans);font-weight:700;font-size:17px;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--terra)}
+.mark em{color:var(--terra)}
+.mark::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'%3E%3Cpath d='M3 14C40 5 90 4 197 9' stroke='%230b4656' stroke-width='5' fill='none' stroke-linecap='round' opacity='.55'/%3E%3C/svg%3E")}
+body{font-size:16.5px;letter-spacing:-.005em}
+.sub{font-size:18px}
+.eyebrow{font-weight:800;letter-spacing:.18em}
+.btn{font-weight:700}
+.brand b{font-size:21px}
+.hero .lead{font-size:19px}
+.steps-sec{background:var(--navy-d)}
+.step .n{font-size:28px;width:54px;height:54px;background:var(--terra);color:#fff}
+.calc{background:var(--terra)}
+.calc small{color:#fff;opacity:.85}
+.calc .big{font-size:64px}
+.price .amt{font-size:40px}
+.value b{font-size:26px}
+.tm b{font-size:24px}
+.who-card h3{font-size:28px}
+.band-text h2{font-size:clamp(32px,3.4vw,44px)}
+/* quote band = wow moment */
+.quote{background:var(--navy);color:#fff;padding:110px 0;text-align:center;position:relative;overflow:hidden}
+.quote::before{content:"“";position:absolute;left:50%;top:-40px;transform:translateX(-50%);font-family:var(--serif);font-size:320px;line-height:1;color:rgba(255,255,255,.06)}
+.quote p{font-family:var(--serif);font-size:clamp(32px,4.2vw,56px);line-height:1.15;max-width:22ch;margin:0 auto;position:relative}
+.quote p em{color:#f0a68d;font-style:italic}
+.quote span{display:inline-block;margin-top:28px;font-family:var(--hand);font-size:30px;color:#f0a68d}
+footer{background:var(--navy-d)}
+@media (max-width:640px){.quote{padding:76px 0}.calc .big{font-size:48px}}
 </style>
 </head>
 <body>
@@ -339,7 +374,7 @@ summary::after{color:var(--terra)}
     <div class="wrap hero-grid">
       <div class="hero-text">
         <p class="eyebrow">Auxiliaires de vie à domicile · Grenoble</p>
-        <h1>On prend soin de vos proches, <span class="mark">chez eux.</span></h1>
+        <h1>On prend soin de vos proches, <span class="mark"><em>chez eux.</em></span></h1>
         <p class="lead">Kenza, Avril et Angélique, trois auxiliaires de vie qui se relaient pour aider les personnes âgées ou fragiles à rester chez elles, en toute sécurité.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="tel:+33614896221"><svg><use href="#phone"/></svg>06 14 89 62 21</a>
@@ -389,6 +424,13 @@ summary::after{color:var(--terra)}
     </div>
   </section>
 
+  <section class="quote">
+    <div class="wrap">
+      <p>Vieillir chez soi, <em>entouré</em> et en confiance&nbsp;: c'est ce qu'on souhaite pour nos proches, et c'est ce qu'on fait chaque jour.</p>
+      <span>Kenza, Avril &amp; Angélique</span>
+    </div>
+  </section>
+
   <section class="who">
     <div class="wrap">
       <p class="eyebrow">Pour qui ?</p>
@@ -423,7 +465,7 @@ summary::after{color:var(--terra)}
           <p>Nous sommes Kenza Herif, Avril Endezoumou et Angélique Courtois, auxiliaires de vie à domicile dans l'agglomération grenobloise.</p>
           <p>Notre objectif : que la personne accompagnée reste chez elle le plus longtemps possible, en sécurité et dans le respect de ses habitudes, et que sa famille soit rassurée.</p>
         </div>
-        <div class="about-img"><img src="https://images.unsplash.com/photo-1706367515559-7d6a3333068c?auto=format&fit=crop&w=900&q=75" alt="Bouquet de fleurs dans un intérieur chaleureux" loading="lazy"></div>
+        <div class="about-img"><img src="https://images.unsplash.com/photo-1765896387377-e293914d1e69?auto=format&fit=crop&w=900&q=75" alt="Auxiliaire de vie et dame âgée souriantes" loading="lazy"></div>
       </div>
       <div class="values">
         <div class="value"><svg><use href="#heart"/></svg><b>Bienveillance</b><p>Une approche humaine et respectueuse.</p></div>
