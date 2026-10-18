@@ -408,6 +408,23 @@ h2 .mark::after{height:.26em;bottom:-.06em}
 .c-note{right:auto;left:auto;top:36px;right:36px;bottom:auto;text-align:right}
 .c-img img{object-position:center center}
 @media (max-width:1000px){.tarifs2{grid-template-columns:1fr}}
+
+/* v13 tarifs compact (mockup) */
+.tarifs2{grid-template-columns:.9fr 1.8fr 1.25fr;gap:22px;align-items:center}
+.tarifs2 .hand-tag{font-size:21px!important;margin:2px 0 6px!important}
+.tarifs2 .tarifs-side li{font-size:14px}
+.tarifs2 .t-intro{grid-column:auto;margin:0}
+.tarifs2 .t-intro h2{font-size:clamp(32px,3.2vw,42px)}
+.t-cards{gap:12px}
+.t-card{height:auto;padding:22px 18px;text-align:left}
+.t-card .ic{margin-bottom:12px}
+.t-card small{min-height:0}
+.t-card .amt{margin-top:0;padding-top:14px;font-size:28px}
+.tarifs2 .tarifs-side{padding:22px 22px}
+.tarifs2 .tarifs-side h3{font-size:20px;margin-bottom:10px}
+.c-img img{object-position:center 30%}
+.c-note{top:auto;bottom:32px;right:32px}
+@media (max-width:1000px){.tarifs2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -592,7 +609,7 @@ h2 .mark::after{height:.26em;bottom:-.06em}
         <p class="muted">Règlement via le CESU (Chèque Emploi Service Universel).</p>
       </div>
       <div class="t-cards">
-        <div class="t-card"><span class="ic"><svg><use href="#cal"/></svg></span><b>Semaine</b><small>Lundi au vendredi</small><span class="amt">24 €/h</span></div>
+        <div class="t-card"><span class="ic"><svg><use href="#cal"/></svg></span><b>Semaine</b><small>Du lundi au vendredi</small><span class="amt">24 €/h</span></div>
         <div class="t-card"><span class="ic"><svg><use href="#cal"/></svg></span><b>Samedi</b><small>Week-end</small><span class="amt">25 €/h</span></div>
         <div class="t-card"><span class="ic"><svg><use href="#cal"/></svg></span><b>Dimanche</b><small>Week-end</small><span class="amt">27 €/h</span></div>
       </div>
@@ -600,7 +617,7 @@ h2 .mark::after{height:.26em;bottom:-.06em}
         <h3>Inclus</h3>
         <ul>
           <li><svg><use href="#check"/></svg>Premier échange sans engagement</li>
-          <li><svg><use href="#check"/></svg>Aide à la mise en place du CESU</li>
+          <li><svg><use href="#check"/></svg>Mise en place du CESU</li>
           <li><svg><use href="#check"/></svg>Aide administrative si besoin</li>
         </ul>
         <span class="hand-tag">jusqu'à 50 % de crédit d'impôt&nbsp;!</span>
@@ -658,7 +675,7 @@ h2 .mark::after{height:.26em;bottom:-.06em}
           </div>
         </div>
         <div class="c-img">
-          <img src="https://images.unsplash.com/photo-1617543414010-212c4537604d?auto=format&fit=crop&w=1100&q=75" alt="Tasse de thé sur une table" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1765896387398-1e1ae8d2eb85?auto=format&fit=crop&w=1100&q=75" alt="Auxiliaire de vie souriante échangeant avec une dame âgée" loading="lazy">
           <span class="c-note">Une présence qui fait la différence</span>
         </div>
       </div>
