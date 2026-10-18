@@ -10,7 +10,8 @@
 <meta property="og:description" content="Aide à domicile pour personnes âgées et en perte d'autonomie dans toute l'agglomération grenobloise.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23154e5c'/%3E%3Cpath d='M32 46s-14-8.5-14-18a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 9.5-14 18-14 18z' fill='%23f6f1e8'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..600,50&family=Nunito:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
@@ -618,6 +619,12 @@ header.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 }
 @media (max-width:1000px){header{backdrop-filter:none;-webkit-backdrop-filter:none;background:#fff}.nav>ul{bottom:auto;height:calc(100vh - 66px);height:calc(100dvh - 66px);z-index:60}}
 body.menu-open .call-fab{display:none!important}
+/* v21 logo + equal cards */
+.logo{background:#fff!important;border:1px solid var(--line);overflow:hidden;width:48px;height:48px}
+.logo img{width:46px;height:46px;object-fit:contain;display:block}
+footer .logo{border:0}
+.who-grid{grid-auto-rows:1fr}
+.who-card{height:100%}
 </style>
 </head>
 <body>
@@ -646,7 +653,7 @@ body.menu-open .call-fab{display:none!important}
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Accueil">
-      <span class="logo"><svg><use href="#hands"/></svg></span>
+      <span class="logo"><img src="logo.png" alt="" width="44" height="44"></span>
       <span><b>Auxiliaires de vie</b><small>Kenza, Avril &amp; Angélique · Grenoble</small></span>
     </a>
     <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
@@ -901,7 +908,7 @@ body.menu-open .call-fab{display:none!important}
   <div class="wrap">
     <div class="foot">
       <div>
-        <span class="brand"><span class="logo"><svg><use href="#hands"/></svg></span><span><b>Auxiliaires de vie</b><small>Kenza, Avril &amp; Angélique</small></span></span>
+        <span class="brand"><span class="logo"><img src="logo.png" alt="" width="44" height="44"></span><span><b>Auxiliaires de vie</b><small>Kenza, Avril &amp; Angélique</small></span></span>
         <p>Aide à domicile pour personnes âgées et en perte d'autonomie à Grenoble et dans l'agglomération.</p>
       </div>
       <nav aria-label="Navigation"><h4>Navigation</h4><a href="#services">Services</a><a href="#aides">Aides</a><a href="#tarifs">Tarifs</a><a href="#zones">Zones</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
