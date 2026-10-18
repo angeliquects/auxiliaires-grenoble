@@ -425,6 +425,16 @@ h2 .mark::after{height:.26em;bottom:-.06em}
 .c-img img{object-position:center 30%}
 .c-note{top:auto;bottom:32px;right:32px}
 @media (max-width:1000px){.tarifs2{grid-template-columns:1fr}}
+
+/* v14 contact without photo */
+.c-deco{background:var(--sand);display:flex;align-items:center;justify-content:center;padding:50px 40px 50px 90px;position:relative}
+.c-heart{position:absolute;right:-40px;bottom:-50px;width:280px;height:280px;color:var(--terra);opacity:.18}
+.c-deco-in{position:relative}
+.c-deco .c-note{position:static;display:block;transform:rotate(-4deg);color:var(--terra);text-shadow:none;font-size:42px;max-width:10ch;text-align:left;margin-bottom:28px;line-height:1}
+.c-deco ul{list-style:none;display:grid;gap:14px}
+.c-deco li{display:flex;gap:12px;align-items:center;font-weight:700;color:var(--navy-d);font-size:16px}
+.c-deco li svg{width:20px;height:20px;color:var(--terra);flex:none}
+@media (max-width:1000px){.c-deco{padding:40px 24px}}
 </style>
 </head>
 <body>
@@ -674,9 +684,16 @@ h2 .mark::after{height:.26em;bottom:-.06em}
             <div class="cp"><b>Angélique</b><a href="tel:+33683178308"><svg><use href="#phone"/></svg>06 83 17 83 08</a><a class="m" href="mailto:angeliquecourtois2012@hotmail.fr">angeliquecourtois2012@hotmail.fr</a></div>
           </div>
         </div>
-        <div class="c-img">
-          <img src="https://images.unsplash.com/photo-1765896387398-1e1ae8d2eb85?auto=format&fit=crop&w=1100&q=75" alt="Auxiliaire de vie souriante échangeant avec une dame âgée" loading="lazy">
-          <span class="c-note">Une présence qui fait la différence</span>
+        <div class="c-img c-deco">
+          <svg class="c-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <div class="c-deco-in">
+            <span class="c-note">Une présence qui fait la différence</span>
+            <ul>
+              <li><svg><use href="#cal"/></svg>Interventions 7j/7, jour et nuit</li>
+              <li><svg><use href="#pin"/></svg>Grenoble et toute l'agglomération</li>
+              <li><svg><use href="#check"/></svg>Premier échange sans engagement</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
