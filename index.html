@@ -625,6 +625,18 @@ body.menu-open .call-fab{display:none!important}
 footer .logo{border:0}
 .who-grid{grid-auto-rows:1fr}
 .who-card{height:100%}
+
+/* v22 cookie banner */
+.ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:200;max-width:560px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px rgba(14,70,87,.18);padding:18px 20px;display:none;font-size:.92rem;color:var(--navy)}
+.ck.show{display:block}
+.ck p{margin:0 0 12px;line-height:1.5}
+.ck p a{color:inherit;text-decoration:underline}
+.ck .ck-b{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.ck button{font:inherit;font-weight:700;border-radius:999px;padding:10px 18px;cursor:pointer;border:1px solid var(--navy)}
+.ck .ck-no{background:#fff;color:var(--navy)}
+.ck .ck-ok{background:var(--navy);color:#fff}
+body.ck-open .call-fab{display:none!important}
+.ck-link{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -914,7 +926,7 @@ footer .logo{border:0}
       <nav aria-label="Navigation"><h4>Navigation</h4><a href="#services">Services</a><a href="#aides">Aides</a><a href="#tarifs">Tarifs</a><a href="#zones">Zones</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
       <div class="fc"><h4>Nous joindre</h4><a href="tel:+33614896221"><svg><use href="#phone"/></svg>06 14 89 62 21</a><a href="mailto:avril.endezoumou@hotmail.fr"><svg><use href="#mail"/></svg>avril.endezoumou@hotmail.fr</a><span><svg><use href="#pin"/></svg>Grenoble et agglomération</span></div>
     </div>
-    <div class="legal"><span>© <span id="y">2026</span> Kenza, Avril &amp; Angélique – Auxiliaires de vie à domicile</span><span><a href="mentions-legales.html">Mentions légales</a> · Photos : Unsplash</span></div>
+    <div class="legal"><span>© <span id="y">2026</span> Kenza, Avril &amp; Angélique – Auxiliaires de vie à domicile</span><span><a href="mentions-legales.html">Mentions légales</a> · <button type="button" class="ck-link" id="ck-manage">Cookies</button> · Photos : Unsplash</span></div>
   </div>
 </footer>
 
@@ -924,6 +936,27 @@ footer .logo{border:0}
 (function(){var b=document.querySelector('.burger'),h=document.querySelector('header');if(!b)return;
 b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';document.body.classList.toggle('menu-open',o)});
 document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open');document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');document.body.style.overflow=''})});})();
+</script>
+<div class="ck" id="ck" role="dialog" aria-label="Cookies">
+  <p>Avec votre accord, nous utilisons un cookie Google pour savoir combien de personnes nous trouvent grâce à nos annonces. Rien d'autre. <a href="mentions-legales.html#cookies">En savoir plus</a></p>
+  <div class="ck-b"><button type="button" class="ck-no" id="ck-no">Refuser</button><button type="button" class="ck-ok" id="ck-ok">Accepter</button></div>
+</div>
+<script>
+(function(){var ID='AW-18521646787',K='ck-consent',box=document.getElementById('ck'),loaded=false;
+function get(){try{return localStorage.getItem(K)}catch(e){return null}}
+function set(v){try{localStorage.setItem(K,v)}catch(e){}}
+function load(){if(loaded)return;loaded=true;window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};
+gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'denied',analytics_storage:'granted'});
+gtag('js',new Date());gtag('config',ID);var sc=document.createElement('script');sc.async=true;sc.src='https://www.googletagmanager.com/gtag/js?id='+ID;document.head.appendChild(sc);}
+function show(){box.classList.add('show');document.body.classList.add('ck-open')}
+function hide(){box.classList.remove('show');document.body.classList.remove('ck-open')}
+document.getElementById('ck-ok').onclick=function(){set('yes');hide();load()};
+document.getElementById('ck-no').onclick=function(){set('no');hide()};
+document.getElementById('ck-manage').onclick=show;
+var c=get();if(c==='yes')load();else if(c!=='no')setTimeout(show,800);
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a||!loaded)return;var h=a.getAttribute('href')||'';
+if(h.indexOf('tel:')===0)gtag('event','clic_telephone',{numero:h.slice(4)});else if(h.indexOf('wa.me')>-1)gtag('event','clic_whatsapp');else if(h.indexOf('mailto:')===0)gtag('event','clic_email');});
+})();
 </script>
 </body>
 </html>
