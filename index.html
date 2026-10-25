@@ -955,7 +955,8 @@ document.getElementById('ck-no').onclick=function(){set('no');hide()};
 document.getElementById('ck-manage').onclick=show;
 var c=get();if(c==='yes')load();else if(c!=='no')setTimeout(show,800);
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a||!loaded)return;var h=a.getAttribute('href')||'';
-if(h.indexOf('tel:')===0)gtag('event','clic_telephone',{numero:h.slice(4)});else if(h.indexOf('wa.me')>-1)gtag('event','clic_whatsapp');else if(h.indexOf('mailto:')===0)gtag('event','clic_email');});
+var conv=function(){gtag('event','conversion',{send_to:'AW-18521646787/x0yrCJqdmqkdEMPN5_9E',value:1.0,currency:'EUR'})};
+if(h.indexOf('tel:')===0){gtag('event','clic_telephone',{numero:h.slice(4)});conv()}else if(h.indexOf('wa.me')>-1){gtag('event','clic_whatsapp');conv()}else if(h.indexOf('mailto:')===0)gtag('event','clic_email');});
 })();
 </script>
 </body>
